@@ -1,0 +1,84 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background-color:#222;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    display:flex;
+}
+
+.container span{
+    display:block;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background-color:white;
+    margin:30px;
+
+}
+
+@keyframes jonglage{
+    0%{
+        transform:translate(0,0);
+    }
+
+    40%{
+        transform:translate(0,0)
+    }
+
+    70%{
+        transform:translate(50%,-200%)
+    }
+
+    100%{
+        transform:translate(150%,0%)
+    }
+}
+
+span:nth-child(1){
+    animation-name:jonglage;
+    animation-duration:2s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+span:nth-child(2){
+    animation-name:jonglage;
+    animation-duration:2s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+@keyframes jonglage2{
+    0%{
+        transform:translate(0,0)
+    }
+
+    40%{
+        transform:translate(0,0)
+    }
+
+    70%{
+        transform:translate(-150%,-200%)
+    }
+
+    100%{
+        transform:translate(-300%,0)
+    }
+}
+
+span:nth-child(3){
+    animation-name:jonglage2;
+    animation-duration:2s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
